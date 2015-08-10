@@ -1,0 +1,58 @@
+<div class="row text-center">
+  <h1>Ship Your Shabby Shipment</h1>
+</div>
+
+
+<form action='/results'>
+  <fieldset>Parcel Dimensions</fieldset>
+
+  <div class="form-group jv-form">
+    <label for="length">Length</label><br>
+    <input type="text" required class="form-control" name="length">
+  </div>
+
+  <div class="form-group jv-form">
+    <label for="width">Width</label><br>
+    <input type="text" required class="form-control" name="width">
+  </div>
+
+  <div class="form-group jv-form">
+    <label for="height">Height</label><br>
+    <input type="text" required class="form-control" name="height">
+  </div><br>
+
+  <fieldset>Shipping Info</fieldset>
+
+  <div class="form-group jv-form">
+    <label for="miles">Miles to Ship</label>
+    <input type="text" name="miles" required class="form-control" value="">
+  </div>
+
+  <div class="form-group jv-form">
+    <label for="days">Estimated days to ship (min 1)</label>
+    <select class="form-control" name="days">
+      <% 1.upto(14) do |n| %>
+        <option value="<%= n %>"><%= n %> days</option>
+      <% end %>
+    </select>
+  </div>
+
+  <fieldset>Extras</fieldset>
+
+  <div class="form-group text-left">
+    <label for="wrap_it">Would you like to wrap your parcel?</label><br>
+    <input type="radio" name="wrap_it" value="true">Yes<br>
+    <input type="radio" name="wrap_it" value="false" checked>No
+  </div>
+
+  <div class="form-group text-left">
+    <label for="employee">Are you an employee?</label><br>
+    <input type="radio" name="employee" value="true">Yes<br>
+    <input type="radio" name="employee" value="false" checked>No
+  </div>
+
+  <div class="row text-center">
+    <button type="submit" class="btn btn-warning">Submit</button>
+  </div>
+
+</form>
