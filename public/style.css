@@ -1,0 +1,9 @@
+.jv-form {
+  width: 100%;
+  display: block;
+}
+
+fieldset {
+  font-size: 24px;
+  color: orange;
+}
