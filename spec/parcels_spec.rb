@@ -17,5 +17,10 @@ describe(Parcel) do
     end
   end
 
-  
+  describe('#wrap') do
+    it('returns the cost of gift wrapping the parcel') do
+      test_parcel = Parcel.new(10, 10, 10)
+      expect(test_parcel.wrap()).to(eq(6))
+    end
+  end
 end
